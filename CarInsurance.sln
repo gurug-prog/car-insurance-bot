@@ -9,7 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarInsurance.BotAssistant.D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarInsurance.BotAssistant.Telegram", "CarInsurance.BotAssistant.Telegram\CarInsurance.BotAssistant.Telegram.csproj", "{ADEDCEB2-9D32-4ABB-9E06-1E8BF4FF4987}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarInsurance.BotAssistant.MindeeOCR", "CarInsurance.BotAssistant.MindeeOCR\CarInsurance.BotAssistant.MindeeOCR.csproj", "{407D88A1-EE4F-4DE0-8D65-430D1A91D4FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarInsurance.BotAssistant.MindeeOCR", "CarInsurance.BotAssistant.MindeeOCR\CarInsurance.BotAssistant.MindeeOCR.csproj", "{407D88A1-EE4F-4DE0-8D65-430D1A91D4FE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarInsurance.BotAssistant.Application", "CarInsurance.BotAssistant.Application\CarInsurance.BotAssistant.Application.csproj", "{3229280F-8FC2-45A1-8897-B16C7E4726D6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarInsurance.BotAssistant.Application.Contracts", "CarInsurance.BotAssistant.Application.Contracts\CarInsurance.BotAssistant.Application.Contracts.csproj", "{29875DFA-2974-455C-8BC8-F936C3551820}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarInsurance.BotAssistant.Domain.Shared", "CarInsurance.BotAssistant.Domain.Shared\CarInsurance.BotAssistant.Domain.Shared.csproj", "{8126365E-EDF5-4A31-A8F1-DDA0545263F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +39,18 @@ Global
 		{407D88A1-EE4F-4DE0-8D65-430D1A91D4FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{407D88A1-EE4F-4DE0-8D65-430D1A91D4FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{407D88A1-EE4F-4DE0-8D65-430D1A91D4FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3229280F-8FC2-45A1-8897-B16C7E4726D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3229280F-8FC2-45A1-8897-B16C7E4726D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3229280F-8FC2-45A1-8897-B16C7E4726D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3229280F-8FC2-45A1-8897-B16C7E4726D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29875DFA-2974-455C-8BC8-F936C3551820}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29875DFA-2974-455C-8BC8-F936C3551820}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29875DFA-2974-455C-8BC8-F936C3551820}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29875DFA-2974-455C-8BC8-F936C3551820}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8126365E-EDF5-4A31-A8F1-DDA0545263F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8126365E-EDF5-4A31-A8F1-DDA0545263F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8126365E-EDF5-4A31-A8F1-DDA0545263F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8126365E-EDF5-4A31-A8F1-DDA0545263F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

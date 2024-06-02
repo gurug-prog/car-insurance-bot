@@ -7,13 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\" />
-    <Folder Include="Mindee\" />
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+    <ProjectReference Include="..\CarInsurance.BotAssistant.Domain.Shared\CarInsurance.BotAssistant.Domain.Shared.csproj" />
   </ItemGroup>
 
 </Project>

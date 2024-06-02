@@ -7,11 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Telegram.Bot" Version="19.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\CarInsurance.BotAssistant.Application.Contracts\CarInsurance.BotAssistant.Application.Contracts.csproj" />
+    <ProjectReference Include="..\CarInsurance.BotAssistant.Domain\CarInsurance.BotAssistant.Domain.csproj" />
   </ItemGroup>
 
 </Project>

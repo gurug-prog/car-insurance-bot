@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:
+  bot-host:
+    build:
+      context: .
+      dockerfile: CarInsurance.BotAssistant.Host/Dockerfile
+    environment:
+      - TG_BOT_TOKEN=7454317978:AAE8FFjajo3PFSBiNtY1ZoHCofoUHV9ave8

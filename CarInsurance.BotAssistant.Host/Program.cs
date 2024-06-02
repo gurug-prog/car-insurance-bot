@@ -7,9 +7,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Telegram.Bot;
 using Telegram.Bot.Polling;
 
-
-var botToken = Environment.GetEnvironmentVariable("TG_BOT_TOKEN")
-    ?? throw new Exception("Unassigned value for TG_BOT_TOKEN env variable");
+var botToken = "7454317978:AAE8FFjajo3PFSBiNtY1ZoHCofoUHV9ave8";
+//var botToken = Environment.GetEnvironmentVariable("TG_BOT_TOKEN")
+//    ?? throw new Exception("Unassigned value for TG_BOT_TOKEN env variable");
 
 using var host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((_, services) =>
@@ -31,7 +31,6 @@ using var host = Host.CreateDefaultBuilder(args)
 
 var tgBotClient = host.Services.GetRequiredService<ITgBotClient>() as TgBotClient;
 var updateHandler = host.Services.GetRequiredService<IUpdateHandler>();
-
 tgBotClient?.StartReceiving(updateHandler);
 
 await host.RunAsync();

@@ -1,4 +1,5 @@
 ﻿using CarInsurance.BotAssistant.Application.Contracts.Telegram;
+using Microsoft.Extensions.Logging;
 using Telegram.Bot.Polling;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.ReplyMarkups;
@@ -9,23 +10,40 @@ namespace CarInsurance.BotAssistant.Telegram;
 
 public class TgBotClient : ITgBotClient
 {
+    private readonly ILogger<TgBotClient> _logger;
     private readonly ITelegramBotClient _telegramBotClient;
 
-    public TgBotClient(ITelegramBotClient telegramBotClient)
+    public TgBotClient(
+        ILogger<TgBotClient> logger,
+        ITelegramBotClient telegramBotClient)
     {
+        _logger = logger;
         _telegramBotClient = telegramBotClient;
     }
 
     public void StartReceiving(IUpdateHandler updateHandler)
     {
-        var cts = new CancellationTokenSource();
-        var cancellationToken = cts.Token;
-        var receiverOptions = new ReceiverOptions();
-        _telegramBotClient.StartReceiving(
-            updateHandler,
-            receiverOptions,
-            cancellationToken
-        );
+        _logger.LogInformation("TgBotClient.StartReceiving started");
+        try
+        {
+            var cts = new CancellationTokenSource();
+            var cancellationToken = cts.Token;
+            var receiverOptions = new ReceiverOptions();
+            _telegramBotClient.StartReceiving(
+                updateHandler,
+                receiverOptions,
+                cancellationToken
+            );
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "TgBotClient.StartReceiving error occured");
+            throw;
+        }
+        finally
+        {
+            _logger.LogInformation("TgBotClient.StartReceiving finished");
+        }
     }
 
     //public async Task<long> SendMenu(long chatId, MenuData data)
